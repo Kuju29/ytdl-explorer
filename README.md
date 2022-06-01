@@ -14,13 +14,13 @@ Open a PowerShell as Administrator and run:
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
-Install yt-dlp and ffmpeg:
+Install **yt-dlp** and **ffmpeg**:
 ```
 choco install yt-dlp ffmpeg
 ```
-Install N_m3u8DL-CLI:
-> Download: https://github.com/nilaoda/N_m3u8DL-CLI/releases \
-<kbd> Copy file .exe to `C:\N_m3u8DL-CLI` and Rename to `N_m3u8DL-CLI.exe`
+Install **N_m3u8DL-CLI**:
+> <kbd> Download: https://github.com/nilaoda/N_m3u8DL-CLI/releases </kbd>\
+> Copy file .exe to `C:\N_m3u8DL-CLI` and Rename to `N_m3u8DL-CLI.exe`
 
 ### Uninstalling ytdl-explorer
 To uninstall the script, Double-click on the uninstall.reg file and confirm the changes. \
