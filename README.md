@@ -4,7 +4,7 @@
 ### How to use it
 1. [Download the ZIP archive of this repository](https://github.com/Kuju29/ytdl-explorer/archive/refs/heads/main.zip)
 2. Unpack the archive
-3. Double-click on the ytdl.reg file and confirm adding the keys to the registry
+3. Double-click on the yt-dlp.reg and ffmpeg.reg file and confirm adding the keys to the registry
 4. Copy the video link, go to the folder where you want to download it
 5. Right click on the empty space and choose your option
 6. Voilà!
@@ -18,8 +18,8 @@ Install yt-dlp and ffmpeg:
 ```
 choco install yt-dlp ffmpeg
 ```
-Download N_m3u8DL-CLI:
-> https://github.com/nilaoda/N_m3u8DL-CLI/releases \
+Install N_m3u8DL-CLI:
+> Download: https://github.com/nilaoda/N_m3u8DL-CLI/releases \
 <kbd> Copy file .exe to `C:\N_m3u8DL-CLI` and Rename to `N_m3u8DL-CLI.exe`
 
 ### Uninstalling ytdl-explorer
