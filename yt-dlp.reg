@@ -23,13 +23,13 @@ Windows Registry Editor Version 5.00
 @="powershell.exe -Command \"$latest = Invoke-WebRequest -Uri https://github.com/yt-dlp/yt-dlp/releases/latest -Method get -MaximumRedirection 0 -UseBasicParsing -ErrorAction Ignore; $latest = ($latest.headers.location -split '/')[-1]; $current = yt-dlp --version; if($current -ne $latest) { Write-Output 'Yt-dlp needs to be updated. Please grant the administrator privileges in the next dialog.'; Start-Sleep -s 5; start-process powershell.exe '-Command Write-Host \"Please wait while yt-dlp is being updated. The process might take a couple of minutes depending on your Internet connection. This is a one-time process\"; yt-dlp -U' -Verb RunAs -Wait}; yt-dlp $(Get-Clipboard) --continue --no-check-certificate --format=bestvideo+bestaudio[ext=aac]/best --merge-output-format=mkv \""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\b_m3u8]
-@="Download video (M3U8)"
+@="Download video (DRM-M3U8)"
 "Icon"="imageres.dll,41"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\b_m3u8\command]
 @="powershell.exe -Command \"C:\\N_m3u8DL-CLI\\N_m3u8DL-CLI.exe\" $(Get-Clipboard)"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\c_mpd]
-@="Download video (MPD)"
+@="Download video (MPD-M3U8)"
 "Icon"="imageres.dll,41"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\c_mpd\command]
 @="powershell.exe -Command \"$latest = Invoke-WebRequest -Uri https://github.com/yt-dlp/yt-dlp/releases/latest -Method get -MaximumRedirection 0 -UseBasicParsing -ErrorAction Ignore; $latest = ($latest.headers.location -split '/')[-1]; $current = yt-dlp --version; if($current -ne $latest) { Write-Output 'Yt-dlp needs to be updated. Please grant the administrator privileges in the next dialog.'; Start-Sleep -s 5; start-process powershell.exe '-Command Write-Host \"Please wait while yt-dlp is being updated. The process might take a couple of minutes depending on your Internet connection. This is a one-time process\"; yt-dlp -U' -Verb RunAs -Wait}; yt-dlp $(Get-Clipboard) --continue --no-check-certificate --external-downloader aria2c --allow-unplayable-formats --all-subs -o '%%(title)s_url.%%(ext)s'\""
