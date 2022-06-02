@@ -14,18 +14,18 @@ Windows Registry Editor Version 5.00
 "Icon"="imageres.dll,103"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\audio_AAC\command]
-@="powershell -Command \"ffmpeg -i '%1' -c:a aac '%1_conv.aac'\""
+@="powershell -Command \"ffmpeg -i '%L' -c:a aac '%L_conv.aac'\""
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h265]
 @="Convert to H265"
 "Icon"="imageres.dll,18"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h265\command]
-@="powershell -Command \"ffmpeg -i '%1' -map 0 -c:v libx265 -crf 20 -vf format=yuv420p10le -metadata:s:v:0 title="Presented By KuJu" -c:a copy '%1_h265.mkv'\""
+@="powershell -Command \"ffmpeg -i '%L' -map 0 -c:v libx265 -crf 20 -vf format=yuv420p10le -metadata:s:v:0 title="Presented By KuJu" -c:a copy '%L_h265.mkv'\""
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h264]
 @="Convert to H264"
 "Icon"="imageres.dll,18"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h264\command]
-@="powershell -Command \"ffmpeg -i '%1' -map 0 -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy '%1_h264.mkv'\""
+@="powershell -Command \"ffmpeg -i '%L' -map 0 -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy '%L_h264.mkv'\""
