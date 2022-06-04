@@ -9,7 +9,7 @@
 5. Right click on the empty space and choose your option
 6. Voilà!
 
-### This script requires | **yt-dlp** | **ffmpeg** | **N_m3u8DL-CLI** |
+### This script requires | **yt-dlp** | **ffmpeg** | **XstreamDL-CLI** |
 Open a PowerShell as Administrator and run:
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
