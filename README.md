@@ -24,6 +24,8 @@ Install **XstreamDL-CLI & N_m3u8DL-CLI**:
 > 1. Rename file to `N_m3u8DL-CLI.exe` and `XstreamDL-CLI.exe`
 > 2. Copy file to new folder `C:\m3u8DL-CLI`
 
+##### _note: if there is an update. You have to change the name here again._
+
 ### Uninstalling ytdl-explorer
 To uninstall the script, Double-click on the uninstall.reg file and confirm the changes. \
 Or delete file from **regedit**
