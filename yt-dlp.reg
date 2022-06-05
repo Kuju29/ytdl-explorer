@@ -26,14 +26,13 @@ Windows Registry Editor Version 5.00
 @="Download video (M3U8-XstreamDL_CLI)"
 "Icon"="imageres.dll,41"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\b_drm_m3u8\command]
-@="powershell -Command \"python -m XstreamDL_CLI.cli\" $(Get-Clipboard)"
-;@="powershell -Command \"C:\\N_m3u8DL-CLI\\XstreamDL-CLI.exe\" $(Get-Clipboard)"
+@="powershell -Command \"C:\\m3u8DL-CLI\\XstreamDL-CLI.exe\" $(Get-Clipboard)"
 
-; [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\c_drm_m3u82]
-; @="Download video (M3U8-N_m3u8DL)"
-; "Icon"="imageres.dll,41"
-; [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\c_drm_m3u82\command]
-; @="powershell -Command \"C:\\N_m3u8DL-CLI\\N_m3u8DL-CLI.exe\" $(Get-Clipboard)"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\c_drm_m3u82]
+@="Download video (M3U8-N_m3u8DL)"
+"Icon"="imageres.dll,41"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\c_drm_m3u82\command]
+@="powershell -Command \"C:\\m3u8DL-CLI\\N_m3u8DL-CLI.exe\" $(Get-Clipboard)"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\d_mpd]
 @="Download video (MPD)"
