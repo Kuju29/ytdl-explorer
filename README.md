@@ -9,7 +9,7 @@
 5. Right click on the empty space and choose your option
 6. Voilà!
 
-### This script requires | **yt-dlp** | **ffmpeg** | **XstreamDL-CLI** |
+### This script requires | **yt-dlp** | **ffmpeg** | **XstreamDL-CLI & N_m3u8DL-CLI** |
 Open a PowerShell as Administrator and run:
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -18,14 +18,11 @@ Install **yt-dlp** and **ffmpeg**:
 ```
 choco install yt-dlp ffmpeg
 ```
-Install **XstreamDL-CLI**:
-- [Install python](https://www.python.org/)
-- <kbd> Download: [XstreamDL-CLI-master.zip](https://github.com/xhlove/XstreamDL-CLI/archive/refs/heads/master.zip) </kbd>
-- <kbd> Donwload: [binaries.7z](https://github.com/xhlove/XstreamDL-CLI/releases/download/1.3.1/binaries.7z) </kbd>
-> 1. Unzip the file `XstreamDL-CLI-master.zip` and `binaries.7z`
-> 2. Copy file from binaries folder `(ffmpeg.exe, mp4box.exe, mp4decrypt.exe)` to `.\XstreamDL-CLI-master\binaries`
-> 3. Open cmd in `.\XstreamDL-CLI-master` [example](https://user-images.githubusercontent.com/22098092/171996089-b214f918-c041-4c82-b7d3-c7a161f55f5b.png)
-> 4. `pip install -r requirements.txt`
+Install **XstreamDL-CLI & N_m3u8DL-CLI**:
+- <kbd> Download: [N_m3u8DL-CLI.exe](https://github.com/nilaoda/N_m3u8DL-CLI/releases) </kbd>
+- <kbd> Donwload: [XstreamDL-CLI.exe](https://github.com/xhlove/XstreamDL-CLI/releases) </kbd>
+> 1. Rename file to `N_m3u8DL-CLI.exe` and `XstreamDL-CLI.exe`
+> 2. Copy file to new folder `C:\m3u8DL-CLI`
 
 ### Uninstalling ytdl-explorer
 To uninstall the script, Double-click on the uninstall.reg file and confirm the changes. \
