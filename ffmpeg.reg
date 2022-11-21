@@ -14,25 +14,39 @@ Windows Registry Editor Version 5.00
 "Icon"="imageres.dll,103"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\audio_AAC\command]
-@="powershell -Command \"ffmpeg -i '%L' -c:a aac '%L_conv.aac'\""
+@="pwsh -Command \"ffmpeg -i '%L' -c:a aac '%L.aac'\""
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h265]
-@="Convert to MKV H.265"
+@="Convert to H265"
 "Icon"="imageres.dll,18"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h265\command]
-@="powershell -Command \"ffmpeg -i '%L' -map 0 -c:v libx265 -crf 20 -vf format=yuv420p10le -metadata:s:v:0 title="Presented By KuJu" -c:a copy '%L_h265.mkv'\""
+@="pwsh -Command \"ffmpeg -i '%L' -map 0 -c:v libx265 -crf 20 -vf format=yuv420p10le -metadata:s:v:0 title="Presented By KuJu" -c:a copy '%L_h265.mkv'\""
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h264]
-@="Convert to MKV H.264"
+@="Convert to H264"
 "Icon"="imageres.dll,18"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h264\command]
-@="powershell -Command \"ffmpeg -i '%L' -map 0 -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy '%L_h264.mkv'\""
+@="pwsh -Command \"ffmpeg -i '%L' -map 0 -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy '%L_h264.mkv'\""
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_mp4]
-@="Convert to MP4 H.264"
+@="Convert to MP4"
 "Icon"="imageres.dll,18"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_mp4\command]
 @="powershell.exe -Command ffmpeg -i '%1' '%1_conv.mp4'"
+
+[HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\z_conv]
+@="Input Key"
+"Icon"="imageres.dll,54"
+
+[HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\z_conv\command]
+@="C:\\N_m3u8DL-CLI\\video-key.bat \"%1\""
+
+[HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\z_m3u8]
+@="M3U8"
+"Icon"="imageres.dll,54"
+
+[HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\z_m3u8\command]
+@="pwsh -Command \"C:\\N_m3u8DL-CLI\\XstreamDL-CLI.exe\" \"'%L'\""
