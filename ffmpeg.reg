@@ -37,6 +37,13 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_mp4\command]
 @="powershell.exe -Command ffmpeg -i '%1' '%1_conv.mp4'"
 
+[HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_mp3]
+@="Convert to MP3"
+"Icon"="imageres.dll,18"
+
+[HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_mp3\command]
+@="powershell.exe -Command ffmpeg -i '%1' '%1_conv.mp3'"
+
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\z_conv]
 @="Input Key"
 "Icon"="imageres.dll,54"
