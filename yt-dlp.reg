@@ -20,7 +20,7 @@ Windows Registry Editor Version 5.00
 @="Download video (H.264)"
 "Icon"="imageres.dll,18"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\a_h264\command]
-@="powershell -Command \"$latest = Invoke-WebRequest -Uri https://github.com/yt-dlp/yt-dlp/releases/latest -Method get -MaximumRedirection 0 -UseBasicParsing -ErrorAction Ignore; $latest = ($latest.headers.location -split '/')[-1]; $current = yt-dlp --version; if($current -ne $latest) { Write-Output 'Yt-dlp needs to be updated. Please grant the administrator privileges in the next dialog.'; Start-Sleep -s 5; start-process powershell '-Command Write-Host \"Please wait while yt-dlp is being updated. The process might take a couple of minutes depending on your Internet connection. This is a one-time process\"; yt-dlp -U' -Verb RunAs -Wait}; yt-dlp $(Get-Clipboard) --continue --no-check-certificate --format=bestvideo[height<=1080]+bestaudio/best[height<=1080] --merge-output-format=mp4 -o '%%(title)s.%%(ext)s' \""
+@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --format=bestvideo[height<=1080]+bestaudio/best --merge-output-format=mp4 -o '%%(title)s.%%(ext)s' \""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\b_drm_m3u8]
 @="Download video (M3U8-XstreamDL_CLI)"
@@ -38,28 +38,28 @@ Windows Registry Editor Version 5.00
 @="Download video (MPD)"
 "Icon"="imageres.dll,41"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\d_mpd\command]
-@="powershell -Command \"$latest = Invoke-WebRequest -Uri https://github.com/yt-dlp/yt-dlp/releases/latest -Method get -MaximumRedirection 0 -UseBasicParsing -ErrorAction Ignore; $latest = ($latest.headers.location -split '/')[-1]; $current = yt-dlp --version; if($current -ne $latest) { Write-Output 'Yt-dlp needs to be updated. Please grant the administrator privileges in the next dialog.'; Start-Sleep -s 5; start-process powershell '-Command Write-Host \"Please wait while yt-dlp is being updated. The process might take a couple of minutes depending on your Internet connection. This is a one-time process\"; yt-dlp -U' -Verb RunAs -Wait}; yt-dlp $(Get-Clipboard) --continue --no-check-certificate --external-downloader aria2c --allow-unplayable-formats --all-subs -o '%%(title)s.%%(ext)s'\""
+@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --external-downloader aria2c --allow-unplayable-formats --all-subs -o '%%(title)s.%%(ext)s'\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\e_sub]
 @="Download subtitles (SUB)"
 "Icon"="imageres.dll,97"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\e_sub\command]
-@="powershell -Command \"$latest = Invoke-WebRequest -Uri https://github.com/yt-dlp/yt-dlp/releases/latest -Method get -MaximumRedirection 0 -UseBasicParsing -ErrorAction Ignore; $latest = ($latest.headers.location -split '/')[-1]; $current = yt-dlp --version; if($current -ne $latest) { Write-Output 'Yt-dlp needs to be updated. Please grant the administrator privileges in the next dialog.'; Start-Sleep -s 5; start-process powershell '-Command Write-Host \"Please wait while yt-dlp is being updated. The process might take a couple of minutes depending on your Internet connection. This is a one-time process\"; yt-dlp -U' -Verb RunAs -Wait}; yt-dlp $(Get-Clipboard) --continue --no-check-certificate --allow-unplayable-formats --all-subs --skip-download\""
+@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --allow-unplayable-formats --all-subs --skip-download\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\f_m4a]
 @="Download audio (m4a)"
 "Icon"="imageres.dll,103"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\f_m4a\command]
-@="powershell -Command \"$latest = Invoke-WebRequest -Uri https://github.com/yt-dlp/yt-dlp/releases/latest -Method get -MaximumRedirection 0 -UseBasicParsing -ErrorAction Ignore; $latest = ($latest.headers.location -split '/')[-1]; $current = yt-dlp --version; if($current -ne $latest) { Write-Output 'Yt-dlp needs to be updated. Please grant the administrator privileges in the next dialog.'; Start-Sleep -s 5; start-process powershell '-Command Write-Host \"Please wait while yt-dlp is being updated. The process might take a couple of minutes depending on your Internet connection. This is a one-time process\"; yt-dlp -U' -Verb RunAs -Wait}; yt-dlp $(Get-Clipboard) --continue --no-check-certificate -f bestaudio -x --audio-format m4a\""
+@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate -f bestaudio -x --audio-format m4a\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\g_playlist]
 @="Download playlist (H.264)"
 "Icon"="imageres.dll,97"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\g_playlist\command]
-@="powershell -Command \"$latest = Invoke-WebRequest -Uri https://github.com/yt-dlp/yt-dlp/releases/latest -Method get -MaximumRedirection 0 -UseBasicParsing -ErrorAction Ignore; $latest = ($latest.headers.location -split '/')[-1]; $current = yt-dlp --version; if($current -ne $latest) { Write-Output 'Yt-dlp needs to be updated. Please grant the administrator privileges in the next dialog.'; Start-Sleep -s 5; start-process powershell '-Command Write-Host \"Please wait while yt-dlp is being updated. The process might take a couple of minutes depending on your Internet connection. This is a one-time process\"; yt-dlp -U' -Verb RunAs -Wait}; yt-dlp $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s' -i --continue --format=bestvideo+bestaudio[ext=m4a]/best --merge-output-format=mp4\""
+@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s' -i --continue --format=bestvideo+bestaudio[ext=m4a]/best --merge-output-format=mp4\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\h_playlist_m4a]
 @="Download playlist (m4a)"
 "Icon"="imageres.dll,128"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\h_playlist_m4a\command]
-@="powershell -Command \"$latest = Invoke-WebRequest -Uri https://github.com/yt-dlp/yt-dlp/releases/latest -Method get -MaximumRedirection 0 -UseBasicParsing -ErrorAction Ignore; $latest = ($latest.headers.location -split '/')[-1]; $current = yt-dlp --version; if($current -ne $latest) { Write-Output 'Yt-dlp needs to be updated. Please grant the administrator privileges in the next dialog.'; Start-Sleep -s 5; start-process powershell '-Command Write-Host \"Please wait while yt-dlp is being updated. The process might take a couple of minutes depending on your Internet connection. This is a one-time process\"; yt-dlp -U' -Verb RunAs -Wait}; yt-dlp $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s' -i --continue --format=bestaudio -x --audio-format m4a\""
+@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s' -i --continue --format=bestaudio -x --audio-format m4a\""
