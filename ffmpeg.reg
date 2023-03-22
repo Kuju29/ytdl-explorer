@@ -2,8 +2,8 @@ Windows Registry Editor Version 5.00
 ; BONUS: Windows Explorer ffmpeg converter!
 ; Does the same thing as ytdl but with already existing files
 
-[HKEY_CLASSES_ROOT\*\shell\ffmpeg]
-"MUIVerb"="ffmpeg"
+[HKEY_CLASSES_ROOT\txtfile\shell\download_ffmpeg]
+"MUIVerb"="Download with ffmpeg"
 "SubCommands"=""
 "MultiSelectModel"="Document"
 
@@ -14,21 +14,21 @@ Windows Registry Editor Version 5.00
 "Icon"="imageres.dll,103"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\audio_AAC\command]
-@="pwsh -Command \"ffmpeg -i '%L' -c:a aac '%L.aac'\""
+@="powershell.exe -Command \"ffmpeg -i '%L' -c:a aac '%L.aac'\""
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h265]
 @="Convert to H265"
 "Icon"="imageres.dll,18"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h265\command]
-@="pwsh -Command \"ffmpeg -i '%L' -map 0 -c:v libx265 -crf 20 -vf format=yuv420p10le -metadata:s:v:0 title="Presented By KuJu" -c:a copy '%L_h265.mkv'\""
+@="powershell.exe -Command \"ffmpeg -i '%L' -map 0 -c:v libx265 -crf 20 -vf format=yuv420p10le -metadata:s:v:0 title="Presented By KuJu" -c:a copy '%L_h265.mkv'\""
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h264]
 @="Convert to H264"
 "Icon"="imageres.dll,18"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_h264\command]
-@="pwsh -Command \"ffmpeg -i '%L' -map 0 -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy '%L_h264.mkv'\""
+@="powershell.exe -Command \"ffmpeg -i '%L' -map 0 -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy '%L_h264.mkv'\""
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\video_mp4]
 @="Convert to MP4"
@@ -56,4 +56,11 @@ Windows Registry Editor Version 5.00
 "Icon"="imageres.dll,54"
 
 [HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\z_m3u8\command]
-@="pwsh -Command \"C:\\N_m3u8DL-CLI\\XstreamDL-CLI.exe\" \"'%L'\""
+@="powershell.exe -Command \"C:\\N_m3u8DL-CLI\\XstreamDL-CLI.exe\" \"'%L'\""
+
+[HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\download_ffmpeg]
+@="Download_FFMPEG"
+"Icon"="imageres.dll,54"
+
+[HKEY_CLASSES_ROOT\*\shell\ffmpeg\shell\download_ffmpeg\command]
+@="powershell.exe -Command & { Import-Csv '%1' | ForEach-Object { ffmpeg -i $_.url -c copy output_$($_.ep).mp4 } }"
