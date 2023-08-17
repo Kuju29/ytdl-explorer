@@ -16,11 +16,17 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell]
 
 
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\aa_youtube]
+@="Download video Youtube)"
+"Icon"="imageres.dll,18"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\aa_youtube\command]
+@="powershell.exe -Command yt-dlp -i $(Get-Clipboard) --merge-output-format=mp4/mkv \""
+
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\a_h264]
 @="Download video (H.264)"
 "Icon"="imageres.dll,18"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\a_h264\command]
-@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate -f bestvideo+bestaudio --merge-output-format=mp4/mkv -o '%%(title)s.%%(ext)s' \""
+@="powershell.exe -Command yt-dlp -i $(Get-Clipboard) --continue --no-check-certificate -f bestvideo+bestaudio --merge-output-format=mp4/mkv -o '%%(title)s.%%(ext)s' \""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\b_drm_m3u8]
 @="Download video (M3U8-XstreamDL_CLI)"
@@ -38,41 +44,41 @@ Windows Registry Editor Version 5.00
 @="Download video (MPD)"
 "Icon"="imageres.dll,41"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\d_mpd\command]
-@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --external-downloader aria2c --allow-unplayable-formats --all-subs -o '%%(title)s.%%(ext)s'\""
+@="powershell.exe -Command yt-dlp -i $(Get-Clipboard) --continue --no-check-certificate --external-downloader aria2c --allow-unplayable-formats --all-subs -o '%%(title)s.%%(ext)s'\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\e_sub]
 @="Download subtitles (SUB)"
 "Icon"="imageres.dll,97"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\e_sub\command]
-@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --allow-unplayable-formats --all-subs --skip-download\""
+@="powershell.exe -Command yt-dlp -i $(Get-Clipboard) --continue --no-check-certificate --allow-unplayable-formats --all-subs --skip-download\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\f_m4a]
 @="Download audio (m4a)"
 "Icon"="imageres.dll,103"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\f_m4a\command]
-@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --no-playlist -f bestaudio -x --audio-format=m4a\""
+@="powershell.exe -Command yt-dlp -i $(Get-Clipboard) --continue --no-check-certificate --no-playlist -f bestaudio -x --audio-format=m4a\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\f_mp3]
 @="Download audio (mp3)"
 "Icon"="imageres.dll,103"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\f_mp3\command]
-@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --no-playlist -f bestaudio -x --audio-format=mp3\""
+@="powershell.exe -Command yt-dlp -i $(Get-Clipboard) --continue --no-check-certificate --no-playlist -f bestaudio -x --audio-format=mp3\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\g_playlist]
 @="Download playlist (H.264)"
 "Icon"="imageres.dll,97"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\g_playlist\command]
-@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -i --continue -f bestvideo+bestaudio --merge-output-format=mp4/mkv -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s'\""
+@="powershell.exe -Command yt-dlp -i $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -i --continue -f bestvideo+bestaudio --merge-output-format=mp4/mkv -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s'\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\h_playlist_m4a]
 @="Download playlist (m4a)"
 "Icon"="imageres.dll,128"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\h_playlist_m4a\command]
-@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -i --continue -f bestaudio -x --audio-format=m4a -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s'\""
+@="powershell.exe -Command yt-dlp -i $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -i --continue -f bestaudio -x --audio-format=m4a -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s'\""
 
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\l_playlist_mp3]
 @="Download playlist (mp3)"
 "Icon"="imageres.dll,128"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Ytdlp\shell\l_playlist_mp3\command]
-@="powershell.exe -Command yt-dlp $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -i --continue -f bestaudio -x --audio-format=mp3 -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s'\""
+@="powershell.exe -Command yt-dlp -i $(Get-Clipboard) --continue --no-check-certificate --yes-playlist -i --continue -f bestaudio -x --audio-format=mp3 -o '%%(playlist)s/%%(playlist_index)s - %%(title)s.%%(ext)s'\""
