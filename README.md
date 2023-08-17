@@ -24,6 +24,11 @@ Install **XstreamDL-CLI & N_m3u8DL-CLI**:
 > 1. Rename file to `N_m3u8DL-CLI.exe` and `XstreamDL-CLI.exe`
 > 2. Copy file to new folder `C:\m3u8DL-CLI`
 
+### Update
+```
+choco upgrade all -y
+```
+
 ##### _note: if there is an update. You have to change the name here again._
 
 ### Uninstalling ytdl-explorer
